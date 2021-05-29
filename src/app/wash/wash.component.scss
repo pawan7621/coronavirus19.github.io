@@ -1,0 +1,21 @@
+.container{
+    margin:10px;
+    mat-card{
+        padding:5px;
+        background:none;
+    }
+    h1 {
+        background:red;
+        color: white;
+        margin:5px 0px;
+        padding:5px;
+        text-align: center;
+        font-size:20px;
+        border-radius:10px;
+    }
+    p{
+      letter-spacing: 1px;
+      font-size:18px;
+      line-height: 25px;
+    }
+}

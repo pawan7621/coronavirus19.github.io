@@ -1,0 +1,83 @@
+
+mat-card{
+    padding:5px;
+}
+.container{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin: 10px 0px;
+    
+    
+    .col{
+        width:30%;
+        margin:5px;
+        text-align: center;
+        &:hover {
+            background:orange;
+            border-radius: 7px;  
+        }
+    }
+    .data {
+        width:50%;
+        margin:20px;
+        padding:20px;
+        background:red;
+        color: white;
+    }
+    .soc-img{
+        width:46%;
+        margin:5px;
+    }
+    .mat-card{
+        background:none;
+       p{
+           color:black;
+       }
+     }
+     .search{
+        width:100%;
+        background:purple;
+        padding:10px;
+     }
+     form{
+        display: flex;
+        justify-content: center;
+        
+        input{
+            width: 80%;
+            border-radius: 3px;
+            border: none;
+            outline: none;
+            padding: 6px;
+        }
+         .btn {
+             width: 20%;
+             background:green;
+             border: none;
+             outline: none;
+             color: white;
+             border-radius: 3px;
+         }
+    }
+    
+}
+.stay{
+    margin:10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding:10px;
+    color: black;
+    font-size:20px;
+    animation-name: stayHome;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes stayHome{
+    0%{color:white; background-color: purple;}
+    100% {color:purple; background-color:white;}
+}

@@ -1,0 +1,11 @@
+.slider{
+    display: flex; 
+    overflow: auto; 
+    background: none;
+
+    img{
+        margin:5px;
+        width:100%;
+        border-radius:10px;
+    }
+}

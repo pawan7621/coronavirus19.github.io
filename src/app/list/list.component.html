@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="covid-data">
+        <p><strong>Country : </strong></p>
+        <p>{{country| titlecase  }}</p>
+    </div>
+    <div class="covid-data">
+        <p><strong>Date : </strong></p>
+        <p>{{date | date:'fullDate'}}</p>
+    </div>
+    <div class="covid-data">
+        <p><strong>Active : </strong></p>
+        <p>{{activeCase| number}}</p>
+    </div>
+    <div class="covid-data">
+        <p><strong>Confirmed : </strong></p>
+        <p>{{confirmed | number }}</p>
+    </div>
+    <div class="covid-data">
+        <p><strong>Deaths : </strong></p>
+        <p>{{deaths | number}}</p>
+    </div>
+    <div class="covid-data">
+        <p><strong>Recoved: </strong></p>
+        <p>{{recovered | number}}</p>
+    </div>
+
+</div>
+
+<div class="container" style="background-color:purple;">
+    <input type="text" [(ngModel)]="nameSearch">
+
+    <table border="1px solid black">
+       <thead>
+          <tr>
+              <th>Country Name</th>
+              <th>Country Code</th>
+              <th>Country data</th>
+          </tr>
+     </thead>
+
+     <tbody>
+         <tr *ngFor = 'let item of countryInfo | filter:nameSearch'>
+             <td>{{item.countryName}}</td>
+             <td>{{item.countryCode}}</td>
+             <td>{{item.countryData}}</td>
+             
+         </tr>
+     </tbody>
+    </table>
+</div>

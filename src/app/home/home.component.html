@@ -1,0 +1,132 @@
+<div class="container">
+    <div class="col">
+        <mat-card style="background-color: red;">
+            <p style="color: white;">Active</p>
+            <p style="color: white;">{{totalConfirm| number}}</p>
+        </mat-card>
+    </div>
+    <div class="col">
+        <mat-card style="background-color: green;">
+            <p style="color: white;"> Deaths</p>
+            <p style="color: white;">{{totalDeaths | number}}</p>
+        </mat-card>
+    </div>
+    <div class="col">
+        <mat-card style="background-color: orange;">
+            <p style="color: white;">Recovered</p>
+            <p style="color: white;">{{totalRecover | number}}</p>
+        </mat-card>
+    </div>
+</div>
+
+<div class="container">
+    
+    <mat-card class="stay">
+          <strong>{{textData}}</strong>
+    </mat-card>
+</div>
+
+<div class="container">
+
+    <div class="search" >
+       
+         <form >
+        <input type="text"  #countryValue >
+        
+        
+        <!-- <select (keyup)="getCountry($event.target.value)"  > 
+            <option *ngFor = "let country of countries" value="{{countries.Slug}}">{{country.Country}}</option>
+        </select> -->
+        <!-- (click)="getCoronaData()" -->
+        
+         <button  class="btn" (click) = "getCoronaData(countryValue.value)" >Search</button>
+      
+        </form>
+        
+    </div>
+    
+    
+</div>
+<!-- <div class="container">
+    <form #searchForm ="ngForm">
+        <input type="text" name="searchTerm" required autocomplete="off" ngModel>
+    </form>
+</div>
+
+<div>
+    <table>
+        <tr><th>Id</th>
+            <th>Country</th>
+        </tr>
+        <tr *ngFor = 'let item of searchResult; index as i'>
+            <td>{{i}}</td>
+            <td>{{item.Country}}</td>
+            <td>{{item.Country}}</td>
+        </tr>
+    </table>
+</div> -->
+
+
+<app-slider></app-slider>
+
+<div class="container">
+    <div class="col" appCustomStyle >
+        <mat-card class="mat-card" routerLink="mask" >
+            <img src="https://cdn3.iconfinder.com/data/icons/corona-virus-covid19/64/using-mask-512.png" alt=""
+                style="width:100%;">
+            <p>Wear Mask</p>
+        </mat-card>
+    </div>
+    <div class="col" appCustomStyle>
+        <mat-card class="mat-card" routerLink="wash" >
+            <img src="https://cdn4.iconfinder.com/data/icons/healthy-life-line-color-live-long-and-prosper/512/Hand_washing-512.png"
+                alt="" style="width:100%;">
+            <p>Hand wash</p>
+        </mat-card>
+    </div>
+    <div class="col" appCustomStyle>
+        <mat-card class="mat-card" routerLink="socdist"  >
+            <img src="https://cdn4.iconfinder.com/data/icons/coronavirus-24/468/42-1m_distance-512.png" alt=""
+                style="width:100%;">
+            <p>Soc. Dist.</p>
+        </mat-card>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="soc-img">
+        <mat-card routerLink="mask">
+            <img src="https://images.theconversation.com/files/326038/original/file-20200407-18916-1p3qplf.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop"
+                alt="" style="width:100%;">
+        </mat-card>
+    </div>
+    <div class="soc-img">
+        <mat-card routerLink="wash">
+            <img src="https://images.theconversation.com/files/297177/original/file-20191015-98653-iqr2x7.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop"
+                alt="" style="width:100%;">
+        </mat-card>
+    </div>
+    <div class="soc-img">
+        <mat-card routerLink="socdist">
+            <img src="https://static.toiimg.com/photo/76427270.cms" alt="" style="width:100%;">
+        </mat-card>
+    </div>
+    <div class="soc-img">
+        <mat-card routerLink="vaccine">
+            <img src="https://static.toiimg.com/photo/77118243.cms" alt="" style="width:100%;">
+        </mat-card>
+    </div>
+</div>
+
+<div class="container">
+    <mat-card style="margin:10px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Fphar-11-00937-g001.jpg/1200px-Fphar-11-00937-g001.jpg"
+            alt="" style="width:100%;">
+    </mat-card>
+    <mat-card style="margin:10px;">
+        <img src="https://img2.storyblok.com/filters:quality(90)/f/81332/1920x640/a7e35fc94b/hero-1920-640-spotlight-on-vaccines-covid-hub-hero-block.jpg"
+            alt="" style="width:100%;">
+    </mat-card>
+</div>
