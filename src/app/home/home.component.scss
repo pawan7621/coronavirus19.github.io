@@ -40,12 +40,11 @@ mat-card{
         width:100%;
         background:purple;
         padding:10px;
-     }
-     form{
         display: flex;
         justify-content: center;
-        
-        input{
+     }
+
+      input{
             width: 80%;
             border-radius: 3px;
             border: none;
@@ -60,7 +59,7 @@ mat-card{
              color: white;
              border-radius: 3px;
          }
-    }
+    
     
 }
 .stay{

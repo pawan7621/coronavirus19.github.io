@@ -18,43 +18,7 @@ date:any
 recovered = 0
 confirmed = 0
 nameSearch:string = ''
-countryInfo = [
-  {
-    countryName:'india',
-    countryCode:101,
-    countryData:895555
-  },
-  {
-    countryName:'irak',
-    countryCode:102,
-    countryData:89695
-  },
-  {
-    countryName:'australia',
-    countryCode:103,
-    countryData:89691
-  },
-  {
-    countryName:'Itli',
-    countryCode:104,
-    countryData:89692
-  },
-  {
-    countryName:'brazil',
-    countryCode:105,
-    countryData:89693
-  },
-  {
-    countryName:'Rush',
-    countryCode:106,
-    countryData:89697
-  },
-  {
-    countryName:'america',
-    countryCode:107,
-    countryData:89698
-  }
-]
+
   constructor(private route:ActivatedRoute, private _du:DesignUtilityService) { 
    this.route.queryParams.subscribe(data => {
      console.log(data);

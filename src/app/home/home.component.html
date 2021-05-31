@@ -20,52 +20,33 @@
 </div>
 
 <div class="container">
-    
-    <mat-card class="stay">
+   <mat-card class="stay">
           <strong>{{textData}}</strong>
     </mat-card>
 </div>
 
 <div class="container">
-
-    <div class="search" >
-       
-         <form >
-        <input type="text"  #countryValue >
-        
-        
-        <!-- <select (keyup)="getCountry($event.target.value)"  > 
+ <div class="search" >
+     <input type="text" #countryValue placeholder="Enter Your Country Name"   [(ngModel)] = "nameSearch">
+      <!-- <select "  > 
             <option *ngFor = "let country of countries" value="{{countries.Slug}}">{{country.Country}}</option>
         </select> -->
-        <!-- (click)="getCoronaData()" -->
-        
-         <button  class="btn" (click) = "getCoronaData(countryValue.value)" >Search</button>
-      
-        </form>
-        
-    </div>
-    
-    
-</div>
-<!-- <div class="container">
-    <form #searchForm ="ngForm">
-        <input type="text" name="searchTerm" required autocomplete="off" ngModel>
-    </form>
+      <button  class="btn" (click) = "getCoronaData(countryValue.value)" >Search</button>
+   </div>
 </div>
 
 <div>
     <table>
-        <tr><th>Id</th>
-            <th>Country</th>
-        </tr>
-        <tr *ngFor = 'let item of searchResult; index as i'>
-            <td>{{i}}</td>
-            <td>{{item.Country}}</td>
-            <td>{{item.Country}}</td>
-        </tr>
-    </table>
-</div> -->
-
+        <thead>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let item of countryName | filter: nameSearch">
+                <td>{{item.name}}</td>
+               </tr>
+        </tbody>
+   </table>
+</div>
 
 <app-slider></app-slider>
 
@@ -92,8 +73,6 @@
         </mat-card>
     </div>
 </div>
-
-
 
 <div class="container">
     <div class="soc-img">
