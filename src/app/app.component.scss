@@ -1,4 +1,52 @@
 
+// sideNav
+mat-sidenav-container{
+     height: 100%;
+ }
+
+  
+// sidenav
+ mat-sidenav{
+     background: lightcoral;
+     width:200px;
+    .container{
+         background:purple;
+         display: flex;
+         align-items: center;
+         padding:10px 0px;
+       .closebtn{
+           margin:5px;
+           cursor: pointer;
+       }  
+       .text{
+           margin:5px;
+           font-size:20px;
+       }
+     }
+
+     .list{
+       color:black;
+         ul{
+            margin: 5px;
+            padding: 0px;
+             text-decoration: none;
+             list-style: none;
+          li{
+              margin: 5px;
+              padding: 5px;
+              cursor: pointer;
+              &:hover{
+                  background-color: purple;
+                  color: white;
+              }
+           }
+        }
+     }
+  }
+
+mat-sidenav-content{
+   background-color: white;
+}
 .wrapper{
     display: flex;
     justify-content: space-between;

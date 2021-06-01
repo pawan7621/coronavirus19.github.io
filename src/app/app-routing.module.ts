@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HelpComponent } from './help/help.component';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { MaskComponent } from './mask/mask.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:'mask', component:MaskComponent},
   {path:'wash', component:WashComponent},
   {path:'socdist', component:SocdistComponent},
-  {path:'vaccine', component:VaccineComponent}
+  {path:'vaccine', component:VaccineComponent},
+  {path:'help', component:HelpComponent}
 ];
 
 @NgModule({

@@ -1,22 +1,48 @@
-
-
-
-<div class="container">
-  <header>
-    <mat-card style="background:purple">
-      <div class="wrapper">
-        <div class="col">
-          <mat-icon aria-hidden="false" aria-label="Example home icon">menu</mat-icon>
-        </div>
-        <div class="col">
-          <h2 style="align-items: center; margin-top:10px;"> Covid-19</h2>
-        </div>
-        <div class="col">
-          <mat-icon aria-hidden="false" aria-label="Example home icon"> notifications</mat-icon>
-        </div>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode = "push" [(opened)] = "opened" style="background-color: white;" >
+    <div class="container"> 
+      <div class="closebtn">
+        <mat-icon (click) = "sidenav.close()" aria-hidden="false" aria-label="Example home icon">chevron_left</mat-icon>
       </div>
-    </mat-card>
-  </header>
+      <div class="text">
+        Covid-19
+      </div>
+    </div>
 
-<router-outlet></router-outlet>
-</div>
+    <div class="list">
+      <ul>
+        <li routerLink="">Home</li>
+        <li>About</li>
+        <li>Gidelines</li>
+        <li routerLink="help">Help</li>
+      </ul>
+    </div>
+    
+  
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="container">
+      <header>
+        <mat-card style="background:purple">
+          <div class="wrapper">
+            <div class="col">
+              <mat-icon (click) = "opened = !opened" aria-hidden="false" aria-label="Example home icon" style="cursor:pointer">menu</mat-icon>
+            </div>
+            <div class="col">
+              <h2 style="align-items: center; margin-top:10px;"> Covid-19</h2>
+            </div>
+            <div class="col">
+              <mat-icon aria-hidden="false" aria-label="Example home icon"> notifications</mat-icon>
+            </div>
+          </div>
+        </mat-card>
+      </header>
+    
+    <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+  
+</mat-sidenav-container>
+
+
+

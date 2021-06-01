@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,7 +15,6 @@ import { WashComponent } from './wash/wash.component';
 import { SocdistComponent } from './socdist/socdist.component';
 import { VaccineComponent } from './vaccine/vaccine.component';
 import { CustomStyleDirective } from './custom-style.directive';
-
 import { FormsModule} from '@angular/forms';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -25,6 +23,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HelpComponent } from './help/help.component';
 import { FilterPipe } from './app_pipe/filter.pipe';
+
 
 @NgModule({
   declarations: [
